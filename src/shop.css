@@ -1,0 +1,41 @@
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.product,
+.basketProduct {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.basket {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 30px;
+    min-height: 100px;
+    text-align: center;
+}
+
+.basketMessage {
+    padding-left: 30px;
+    background-color: #333;
+    color: #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.basketProducts {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#order {
+    text-align: center;
+}
+
