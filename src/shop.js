@@ -54,9 +54,9 @@ function createCatalog(items) {
     }
 }
 
-// функция возвращает строку с версткой для одного товара в корзине
+// функция возвращает строку с версткой для одного товара в корзине. BasketProd - строковая переменная с генерируем внутри кодом
 function createBasketProduct(item) {
-    let basketProd = `
+    let basketProd = `                 
         <div class='basketProduct'>
             <h2>${item.name}</h2>
             <p>Цена: ${item.price}</p>
@@ -79,7 +79,7 @@ function createBasket(items) {
     } else {
         let cost = 0;
         let amount = 0;
-        let basketProducts = ''; // сюда будем сохранять верстку товаров (строку)
+        let basketProducts = ''; // сюда  сохраняется верстка товаров (строку)
         for (let i = 0; i < items.length; i++) { // проходимся по массиву товаров корзины
             amount += 1; // увеличиваем счетчик количества товаров
             cost += items[i].price; // увеличиваем общую стоимость
@@ -110,7 +110,7 @@ createBasket(basketProducts);
 
 // функция для добавления товаров в корзину. event - позволяет обратиться к событию
 function addProd(event) {
-    if (!event.target.dataset.id) { // проверяем, что мы кликнули не по кнопке "купить"
+    if (!event.target.dataset.id) { // проверяем, что мы кликнули не по кнопке "купить", т.е. событие должно сработать только при нажатии на кнопку, а не на блок целиком
         return; // завершаем работу функции, если это не так
     }
     for(let i = 0; i < products.length; i++) { // если клик по кнопке купить, проходимся в цикле по массиву продуктов в каталоге
@@ -124,4 +124,4 @@ function addProd(event) {
 catalog.addEventListener('click', addProd) // вешаем обработчик клика на каталог
 
 
-
+// ******************** // 
